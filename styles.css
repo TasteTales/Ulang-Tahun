@@ -1,0 +1,233 @@
+/* Global Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F8C8DC; /* Pink lembut */
+  color: #333;
+  overflow-x: hidden; /* Mencegah horizontal scroll */
+}
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #D9B898; /* Cokelat muda */
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem;
+  background-color: #F8C8DC; /* Pink lembut */
+  gap: 2rem;
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.hero-text {
+  flex: 1;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-message {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.hero-image-single {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.hero-image-single img {
+  max-width: 500px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* About Section */
+.about {
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column; /* Susun elemen vertikal */
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 2rem;
+}
+
+.media-container { /* Container baru untuk foto dan video */
+  display: flex;
+  flex-direction: row; /* Susun foto dan video horizontal */
+  width: 100%;
+  gap: 2rem;
+}
+
+.about-image {
+  position: relative;
+  overflow: hidden; /* Pastikan overflow: hidden */
+  height: 400px; /* Tinggi container disesuaikan */
+  width: 70%; /* Lebar foto 70% */
+  margin: 0;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-image img {
+  width: auto;  /* Lebar otomatis */
+  height: 100%;   /* Tinggi memenuhi container */
+  object-fit: contain; /* Foto portrait ditampilkan penuh */
+  position: absolute;
+  top: 0;
+  left: 50%;      /* Posisikan di tengah horizontal */
+  transform: translateX(-50%); /* Geser ke kiri sebesar 50% dari lebarnya sendiri */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 20px; 
+}
+
+.about-text {
+  margin-top: 0;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-message {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Ucapan Panjang Section */
+.ucapan-panjang {
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.ucapan-panjang .about-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.ucapan-panjang .about-message {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.note-kenangan {
+  text-align: center;
+  font-style: italic;
+  color: #555;
+  margin-top: 1rem; /* Beri jarak antara elemen video dan teks */
+}
+
+/* Extra Section */
+.extra {
+  padding: 5rem 2rem;
+  background-color: #F8C8DC;
+  text-align: center;
+}
+
+.extra-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.extra-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.extra-message {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.surprise-button {
+  background-color: #D9B898;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.surprise-button:hover {
+  background-color: darken(#D9B898, 10%);
+}
+
+#surprise-content {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#surprise-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #F8C8DC;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Media Query untuk Responsiveness */
+@media (max-width: 768px) {
+  .media-container { /* Container baru untuk foto dan video */
+    flex-direction: column; /* Susun foto dan video vertikal di layar kecil */
+  }
+  .about-image, video {
+    width: 100%; /* Lebar penuh di layar kecil */
+  }
+}
+
+video {
+  width: 30%; /* Lebar video 30% */
+}
